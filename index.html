@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Clicker</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4; }
+        #money-display { font-size: 2em; color: green; }
+        #click-btn { font-size: 20px; padding: 10px 20px; cursor: pointer; }
+        .upgrade { margin: 20px; display: inline-block; }
+        .rebirth { margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <h1>Pengar Klickare</h1>
+    <div id="money-display">Money: 0</div>
+    <button id="click-btn">KLICKA!</button>
+    <div class="upgrades">
+        <div class="upgrade">
+            <h2>Upgrade 1</h2>
+            <button>Buy</button>
+        </div>
+        <div class="upgrade">
+            <h2>Upgrade 2</h2>
+            <button>Buy</button>
+        </div>
+    </div>
+    <div class="rebirth">
+        <h2>Rebirth System</h2>
+        <p>Reset your money to gain permanent multipliers!</p>
+        <button id="rebirth-btn">Rebirth</button>
+    </div>
+    <script>
+        let money = 0;
+        document.getElementById('click-btn').onclick = function() {
+            money++;
+            document.getElementById('money-display').innerText = 'Money: ' + money;
+        };
+        document.getElementById('rebirth-btn').onclick = function() {
+            // Logic for rebirth goes here
+            money = 0;  // Reset money
+            alert('You have rebirthed! Permanent multipliers earned!');
+        };
+    </script>
+</body>
+</html>
